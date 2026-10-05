@@ -1,4 +1,4 @@
-const CACHE = 'number-forest-pwa-v1';
+const CACHE = 'number-forest-pwa-v2';
 const ROOT = new URL('./', self.location.href).href;
 const FILES = ['./','index.html','style.css','engine.js','app.js','pwa.js','manifest.webmanifest','icon-192.svg','icon-192.svg','icon-512.svg'].map(path => new URL(path, ROOT).href);
 self.addEventListener('install', event => {
@@ -17,4 +17,6 @@ self.addEventListener('fetch', event => {
     event.respondWith(caches.open(CACHE).then(cache => cache.match(event.request)).then(cached => cached || fetch(event.request)));
   }
 });
+
+
 
