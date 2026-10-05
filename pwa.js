@@ -6,7 +6,7 @@
   const banner = document.createElement('section');
   banner.className = 'install-banner';
   banner.setAttribute('aria-label', '숫자 숲 앱 설치');
-  banner.innerHTML = '<img src="icon-192.png" alt="" width="48" height="48"><div><strong>숫자 숲을 내 폰에 쏙!</strong><p id="install-status" role="status">홈 화면에서 바로 시작해요.</p></div><button id="install-app" class="primary">앱 설치</button>';
+  banner.innerHTML = '<img src="icon-192.svg" alt="" width="48" height="48"><div><strong>숫자 숲을 내 폰에 쏙!</strong><p id="install-status" role="status">홈 화면에서 바로 시작해요.</p></div><button id="install-app" class="primary">앱 설치</button>';
   document.querySelector('#home .section-heading').before(banner);
   const button = document.getElementById('install-app');
   const status = document.getElementById('install-status');
@@ -53,3 +53,4 @@
     }).catch(() => {if (!isInstalled()) status.textContent = '홈 화면에서 바로 시작해요. 첫 실행에는 인터넷이 필요해요.';});
   }
 })();
+
